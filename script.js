@@ -107,3 +107,53 @@ for (let i = 10; i < 401; i++){
 for (let i = 12; i < 4001; i++){
     i%3===0 ? console.log(i) : undefined
 }
+
+//Get even
+//Print out the numbers that are within the range of 1 - 100
+//Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+
+
+for (let i = 0; i < 101; i++){
+    i%2 === 0 ? console.log(i +" "+ "is even") : console.log(i)
+}
+
+//HighFIVe Problem
+
+for (let i = 1; i < 1001; i++){
+    if (i % 3 === 0 && i % 5 === 0) { 
+        console.log(`${i} is a highbread`)
+    }else if (i % 5 === 0) {
+        console.log(`I found a ${i}, HiFive`)
+    } else if (i % 3 === 0) {
+        console.log(`I found a ${i}, but three is a crowd`)
+    }
+}
+
+D. Savings account
+Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+Check your work! Your bank_account should have $55 in it.
+
+You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+Check your work! Your bank_account should have $10,100 in it.
+
+
+//A. Talk about it:
+//What are the things in an array called ?
+    //an element
+//Do Arrays guarantee those things will be in order?
+    //yes
+//What real-life thing could you model with an array?
+// a file cabinet
+
+//B. Easy Does It
+//Create an array that contains three quotes and store it in a variable called quotes
+
+    let quotes = ''
+    ["its raining cats and dogs", "the sky is falling", "moma said knock you out", quotes]
+
+    C. Accessing elements
+Given the following array const randomThings = [1, 10, "Hello", true]
+
+How do you access the 1st element in the array?
+Change the value of "Hello"to "World"
+Check the value of the array to make sure it updated the array. How? Why, yes! console.log();
