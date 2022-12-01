@@ -76,3 +76,7 @@ animal === "cow" ? console.log("Mooooo") : console.log("Hey! You're not a cow.")
 }
 
 farm()
+
+E. Driver's Ed
+Make a variable that holds a person's age; be semantic
+Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
