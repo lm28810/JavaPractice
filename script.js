@@ -77,6 +77,33 @@ animal === "cow" ? console.log("Mooooo") : console.log("Hey! You're not a cow.")
 
 farm()
 
-E. Driver's Ed
-Make a variable that holds a person's age; be semantic
-Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
+//E. Driver's Ed
+//Make a variable that holds a person's age; be semantic
+//Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
+
+const driver = () => {
+    let age = 34
+    age >= 16 ? console.log("Here are the keys") : console.log("Sorry, you're too young.")
+
+}
+
+driver()
+
+//II. Loops
+////A. The basics
+//Write a loop that will print out all the numbers from 0 to 10, inclusive
+for (let i = 0; i < 11; i++){
+    console.log(i)
+}
+
+//Write a loop that will print out all the numbers from 10 up to and including 400
+
+for (let i = 10; i < 401; i++){
+    console.log(i)
+}
+
+//Write a loop that will print out every third number starting with 12 and going no higher than 4000
+
+for (let i = 12; i < 4001; i++){
+    i%3===0 ? console.log(i) : undefined
+}
