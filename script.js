@@ -129,12 +129,35 @@ for (let i = 1; i < 1001; i++){
     }
 }
 
-D. Savings account
-Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
-Check your work! Your bank_account should have $55 in it.
+//D. Savings account
 
-You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
-Check your work! Your bank_account should have $10,100 in it.
+//Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+//Check your work! Your bank_account should have $55 in it.
+
+let bankAccount = ()=>{
+    let array = []
+    for(let i= 1; i<11; i++){
+    array.push(i)
+    }
+    let sum = array.reduce((a, b) => a + b, 0);
+console.log(sum)
+}
+bankAccount()
+
+//You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+//Check your work! Your bank_account should have $10,100 in it.
+
+
+let bankAccount2 = ()=>{
+    let array = []
+    for(let i= 1; i<101; i++){
+    array.push(i)
+    }
+    let sum = array.reduce((a, b) => a + b, 0)*2;
+console.log(sum)
+}
+bankAccount2()
+
 
 
 //A. Talk about it:
@@ -148,12 +171,81 @@ Check your work! Your bank_account should have $10,100 in it.
 //B. Easy Does It
 //Create an array that contains three quotes and store it in a variable called quotes
 
-    let quotes = ''
-    ["its raining cats and dogs", "the sky is falling", "moma said knock you out", quotes]
+    let quote = "Hello WOrld"
+let array = ["its raining cats and dogs", "the sky is falling", "moma said knock you out", quote]
 
-    C. Accessing elements
-Given the following array const randomThings = [1, 10, "Hello", true]
+//C.Accessing elements
+ 
+   //Given the following array
+    //How do you access the 1st element in the array?
 
-How do you access the 1st element in the array?
-Change the value of "Hello"to "World"
-Check the value of the array to make sure it updated the array. How? Why, yes! console.log();
+ const randomThings = [1, 10, "Hello", true]
+ console.log(randomThings[0])
+ 
+ //Change the value of "Hello"to "World"
+
+ randomThings[2]= "World"
+ //Check the value of the array to make sure it updated the array.How ? Why, yes!
+
+console.log(randomThings);
+
+
+// D. Change values
+// Given the following array
+// What would you write to access the 3rd element of the array?
+
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+
+console.log(ourClass[2])
+//Change the value of "Github" to "Octocat"
+//Add a new element, "Cloud City" to the array
+
+
+ourClass[4] = "Octocat"
+ourClass.push("Cloud City")
+console.log(ourClass)
+
+//E. Mix It Up
+//Note: You don't really need .splice()for these. You could use it, but there are simpler array methods that are more appropriate.
+
+//Given the following array:
+
+const myArray = [5, 10, 500, 20]
+
+//Add the string "Aegon"to the end of the array. Add another string of your choice to the end of the array.
+
+myArray.push("Aegon","Vegan")
+
+//Remove the 5from the beginning of the array.
+
+myArray.shift()
+
+//Add the string "Bob Marley"to the beginning of the array.
+
+myArray.unshift("Bob Marley")
+
+//Remove the string of your choice from the end of the array.
+
+myArray.pop()
+//Reverse this array using Array.prototype.reverse(). Did you mutate the array? What does mutate mean? Did the .reverse()method return anything?
+
+myArray.reverse()
+
+console.log(myArray)
+
+
+//F. Biggie Smalls
+//Create a variable that contains an integer.
+
+let numbers =[-1,2,4,5,6]
+
+//Write an if ... elsestatement that:
+
+//console.log()s "little number" if the number is entered is less than 100
+//console.log()s big numberif the number is greater than or equal to 100.
+
+const bigorlittle = num => {
+    num< 100 ? console.log("little number") : console.log("big number")
+}
+
+bigorlittle(100)
