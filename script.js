@@ -249,3 +249,116 @@ const bigorlittle = num => {
 }
 
 bigorlittle(100)
+
+G. Monkey in the Middle
+Write an if ... else if ... elsestatement:
+
+console.log()little numberif the number entered is less than 5.
+If the number entered is more than 10, log big number.
+Otherwise, log "monkey".
+
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "GA hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],[
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs"
+  ],[
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans"
+  ]
+];
+
+What's Kristyn wearing today? Using bracket notation to access items in kristynsCloset, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.
+Kristyn just bought some sweet shades! Add "raybans"to her closet after "yellow knit hat".
+Kristyn spilled coffee on her hat... modify this item to read "stained knit hat"instead of yellow.
+Put together an outfit for Thom! Using bracket notation, access the first element in Thom's shirtsarray.
+In the same way, access one item from Thom's pants array.
+Access one item from Thom's accessories array.
+Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
+Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
+
+
+//Print Greeting
+
+const greet = name => {
+    console.log(`Good Day ${name}`)
+}
+
+greet("Chase")
+
+// Print Cool
+
+const printCool = name => { 
+    console.log(`${name} is cool`)
+
+}
+
+printCool('James')
+
+//======> Objects Start here 
+
+//A. Make a user object
+//Create an object called user.
+//Write in to the object the key-value pairs for name, email, age, and purchased. Set the value of purchasedto an empty array []. Set the other values to whatever you would like.
+
+const user = {
+    name: "James",
+    email: undefined,
+    age: 23,
+    purchased: [],
+
+    
+}
+
+
+//B. Update the user
+//Our user has changed his or her email address. Without changing the original userobject, update the emailvalue to a new email address.
+
+user.email="fakeemail@gmail.com"
+
+//Our user has had a birthday! Without changing the original userobject, increment the agevalue using the postfix operator. Hint: age++
+
+user.age += 1
+
+//Adding keys and values
+//You have decided to add your user's location to the data that you want to collect.
+//Without changing the original userobject, add a new key locationto the object, and give it a value or some-or-other location (a string).
+
+user.location = "Detroit, Michigan"
+
+//D. Shopaholic!
+//Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchasedarray.
+
+user.purchased.push("carbohydrates")
+
+//Our user has purchased an item! They have purchased some "peace of mind".Using.push(), add the string "peace of mind" to the purchasedarray.
+
+user.purchased.push("peace of mind","Merino jodhpurs" )
+
+//Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchasedarray.
+//Console.log just the "Merino jodhpurs" from the purchasedarray.
+
+console.log("Merino jodhpurs")
+
+
