@@ -250,12 +250,24 @@ const bigorlittle = num => {
 
 bigorlittle(100)
 
-G. Monkey in the Middle
-Write an if ... else if ... elsestatement:
+//G. Monkey in the Middle
+//Write an if ... else if ... elsestatement:
 
-console.log()little numberif the number entered is less than 5.
-If the number entered is more than 10, log big number.
-Otherwise, log "monkey".
+const littleOrBig = num => {
+    if (num< 5) {
+        console.log("little number")
+    } else if (num > 10) {
+        console.log("big number")
+    } else {
+        console.log("monkey")
+    }
+}
+
+littleOrBig(4)
+
+//console.log()little numberif the number entered is less than 5.
+//If the number entered is more than 10, log big number.
+//Otherwise, log "monkey".
 
 
 const kristynsCloset = [
@@ -289,16 +301,39 @@ const thomsCloset = [
   ]
 ];
 
-What's Kristyn wearing today? Using bracket notation to access items in kristynsCloset, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.
-Kristyn just bought some sweet shades! Add "raybans"to her closet after "yellow knit hat".
-Kristyn spilled coffee on her hat... modify this item to read "stained knit hat"instead of yellow.
-Put together an outfit for Thom! Using bracket notation, access the first element in Thom's shirtsarray.
-In the same way, access one item from Thom's pants array.
-Access one item from Thom's accessories array.
-Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
-Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
+//What's Kristyn wearing today? Using bracket notation to access items in kristynsCloset, log the sentence
+console.log("Kristyn is rocking that " + kristynsCloset[2])
+//in Kristyn's closet + " today!" to the console.
+// Kristyn just bought some sweet shades! Add "raybans"to her closet after "yellow knit hat".
+kristynsCloset.splice(5,0,"raybans")
 
 
+// Kristyn spilled coffee on her hat... modify this item to read "stained knit hat"instead of yellow.
+
+kristynsCloset[6] = "stained hat"
+
+// Put together an outfit for Thom! Using bracket notation, access the first element in Thom's shirtsarray.
+
+console.log(thomsCloset[0][0])
+1
+
+// In the same way, access one item from Thom's pants array.
+
+console.log(thomsCloset[1][0])
+
+// Access one item from Thom's accessories array.
+
+console.log(thomsCloset[2][1])
+// Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
+
+console.log(`Thomas is wearing ${thomsCloset[0][0]} and ${thomsCloset[1][0]} and ${thomsCloset[2][1]}`)
+
+
+// Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
+
+thomsCloset[1][2] = "Footie Pajamas"
+
+console.log(thomsCloset)
 //Print Greeting
 
 const greet = name => {
@@ -361,4 +396,15 @@ user.purchased.push("peace of mind","Merino jodhpurs" )
 
 console.log("Merino jodhpurs")
 
+// Write a friendobject into your userobject and give the friend a name, age, location, and purchased array (empty for now)
+// Console.log just the friend's name
+// Console.log just the friend's location
+// CHANGE the friend's age to 55
+// The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchasedarray.
+// The friendhas purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
+// Console.log just "A latte" from the friend's purchasedarray.
 
+user.friend = {
+    name: "Grace Hopper",
+    age: 85
+}
