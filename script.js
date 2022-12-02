@@ -351,6 +351,73 @@ const printCool = name => {
 
 printCool('James')
 
+//C. calculateCube
+//Write a function calculateCubethat takes a single number and prints the volume of a cube made from that number.
+
+const cubed = num => {
+    console.log(Math.pow(num,3))
+}
+
+cubed(3)
+
+//D. isVowel
+//Write a function isVowelthat takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case. Test your function on every vowel and make sure it's working. In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want.
+
+const isVowel = str => {
+    let results = /[aeiou]/gi.test(str)
+    return results
+}
+
+console.log(isVowel("y"))
+
+//E. getTwoLengths
+//Write a function getTwoLengthsthat accepts two parameters (strings). The function should return an array of numbers where each number is the length of the corresponding string.
+
+const twoLengths = (a, b) => {
+    let results = []
+    let str1 = a.split("")
+    let str2 = b.split("")
+
+    results.push(str1.length, str2.length)
+
+
+
+    console.log(results)
+}
+
+twoLengths("happy", "birthday")
+
+//F. getMultipleLengths
+//Write a function getMultipleLengthsthat accepts a single parameter as an argument: an array of strings. The function should return an array of numbers where each number is the length of the corresponding string.
+
+const getMultipleLengths = arr => {
+    let results = []
+    arr.forEach(word => results.push(word.length))
+    return results
+}
+
+console.log(getMultipleLengths(["happy","birthday", "little","man"]))
+
+
+//G. maxOfThree
+//Define a function maxOfThreethat takes three numbers as arguments and returns the largest of them. If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned. Be sure to test it with larger values in each of the three locations.
+
+const maxOfThree = arr => {
+    return Math.max(...arr)
+}
+
+console.log(maxOfThree([1, 22, 34, 55, 66, 3]))
+
+//H. printLongestWord
+//Write a function printLongestWordthat accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
+
+const printLongestWord = arr => {
+    arr.sort(function(a, b) { return b.length - a.length; });
+  return arr[0];
+}
+
+console.log(printLongestWord(["Happy","birthday", "Avery", "and","Greyson","Best Wishes"]))
+
 //======> Objects Start here 
 
 //A. Make a user object
@@ -406,5 +473,57 @@ console.log("Merino jodhpurs")
 
 user.friend = {
     name: "Grace Hopper",
-    age: 85
+    age: 85,
+    location: "Brighton, Michigan",
+    purchased:[],
 }
+
+console.log(user.friend.name)
+console.log(user.friend.location)
+user.friend.age = 55
+console.log(user.friend.age)
+user.friend.purchased.push("The One Ring", "A latte")
+console.log(user.friend.purchased)
+console.log(user.friend.purchased[1])
+
+//F. Loops
+//Write a for loop that iterates over the User's purchasedarray (NOT the friend's purchased array), and prints each element to the console.
+
+const userPurchased = () => {
+    for (let i = 0; i < user.purchased.length; i++) {
+        console.log(user.purchased[i])
+    }
+}
+
+userPurchased()
+//Write a for loop that iterates over the Friend's purchasedarray, and prints each element to the console.
+
+const friendPurchased = () => {
+    for (let i = 0; i < user.friend.purchased.length; i++) {
+        console.log(user.friend.purchased[i])
+    }
+}
+
+friendPurchased()
+
+//G. Functions can operate on objects
+//Write a single function updateUserthat takes no parameters. When the function is run, it should:
+//it should increment the user's age by 1
+//ake the user's name uppercase
+//The function does not need a returnstatement, it will merely modify the user object.
+
+const updateUser = () => {
+    user.name= user.name.toUpperCase()
+    user.age += 1;
+}
+//updateUser()
+console.log(user)
+
+//Write a function oldAndLoudthat performs the exact same tasks as updateUser, but instead of hard-coding it to only work on our userobject, make it take a parameter person, and have it modify the object that is passed in as an argument when the function is called. Call your oldAndLoudfunction with useras the argument.
+
+const updateUser2 = (obj) => {
+    obj.name = obj.name.toUpperCase();
+    user.age += 1;
+}
+updateUser2(user)
+console.log(user)
